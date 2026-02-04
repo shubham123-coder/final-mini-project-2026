@@ -8,6 +8,8 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "@/config";
+
 
 const Auth = () => {
   const { toast } = useToast();
@@ -34,7 +36,7 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("https://project-backend-g7uq.onrender.com", {
+      const res = await fetch(`${BACKEND_URL}/api/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
@@ -79,7 +81,7 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("https://project-backend-g7uq.onrender.com", {
+      const res = await fetch(`${BACKEND_URL}/api/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

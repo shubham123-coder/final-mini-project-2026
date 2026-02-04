@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
+import { BACKEND_URL } from "@/config";
 import {
   Select,
   SelectContent,
@@ -68,7 +69,7 @@ const PostProperty = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("https://project-backend-g7uq.onrender.com", {
+      const res = await fetch(`${BACKEND_URL}/api/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
