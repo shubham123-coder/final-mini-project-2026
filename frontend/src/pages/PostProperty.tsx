@@ -68,7 +68,7 @@ const PostProperty = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/properties", {
+      const res = await fetch("https://final-mini-project-2026.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -34,7 +34,7 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch("https://final-mini-project-2026.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
@@ -79,7 +79,7 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/signup", {
+      const res = await fetch("https://final-mini-project-2026.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
