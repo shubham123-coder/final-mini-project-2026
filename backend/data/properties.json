@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1770192620769,
+    "title": "mansion villa",
+    "type": "room",
+    "price": 1000,
+    "location": "golmuri",
+    "city": "jamshedpur",
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "area": 100,
+    "description": "test",
+    "furnishing": "unfurnished",
+    "amenities": [
+      "Parking"
+    ],
+    "ownerName": "rajpal bhai",
+    "ownerPhone": "1000000000",
+    "ownerEmail": "1@gmail.com",
+    "createdAt": "2026-02-04T08:10:20.769Z"
+  }
+]

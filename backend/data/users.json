@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1770190716658,
+    "name": "shu",
+    "email": "123@gmail.com",
+    "phone": "9031944811",
+    "password": "jhalla..",
+    "userType": "tenant"
+  },
+  {
+    "id": 1770191087229,
+    "name": "vishal kumar",
+    "email": "vishal@gmail.com",
+    "phone": "7250238563",
+    "password": "12345678",
+    "userType": "tenant"
+  },
+  {
+    "id": 1770202214324,
+    "name": "rishita rajpal",
+    "email": "25@gmail.com",
+    "phone": "0000000000",
+    "password": "jhalla..",
+    "userType": "tenant"
+  },
+  {
+    "id": 1770202467543,
+    "name": "shubham rajpal",
+    "email": "shubhamrajpal827@gmail.com",
+    "phone": "9031944811",
+    "password": "jhalla..",
+    "userType": "tenant"
+  },
+  {
+    "id": 1770202516917,
+    "name": "rishita rajpal",
+    "email": "rishita@gmail.com",
+    "phone": "7004800491",
+    "password": "jhalla..",
+    "userType": "tenant"
+  },
+  {
+    "id": 1770202725984,
+    "name": "rishi",
+    "email": "4@gmail.com",
+    "phone": "9031944811",
+    "password": "jhalla..",
+    "userType": "tenant"
+  }
+]
