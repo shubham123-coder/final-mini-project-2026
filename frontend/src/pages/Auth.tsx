@@ -10,7 +10,6 @@ import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "@/config";
 
-
 const Auth = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -36,7 +35,7 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch(`${BACKEND_URL}/api/signup`, {
+      const res = await fetch(`${BACKEND_URL}/api/login`, { // ✅ fixed
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
@@ -57,7 +56,7 @@ const Auth = () => {
     } catch (err: any) {
       toast({
         title: "Error",
-        description: err.message,
+        description: err.message || "Something went wrong",
         variant: "destructive",
       });
     } finally {
@@ -108,7 +107,7 @@ const Auth = () => {
     } catch (err: any) {
       toast({
         title: "Error",
-        description: err.message,
+        description: err.message || "Something went wrong",
         variant: "destructive",
       });
     } finally {
@@ -129,6 +128,7 @@ const Auth = () => {
                 <TabsTrigger value="signup">Sign Up</TabsTrigger>
               </TabsList>
 
+              {/* LOGIN FORM */}
               <TabsContent value="login">
                 <form onSubmit={handleLogin} className="space-y-4 mt-4">
                   <div>
@@ -142,6 +142,7 @@ const Auth = () => {
                       required
                     />
                   </div>
+
                   <div>
                     <Label>Password</Label>
                     <Input
@@ -153,12 +154,14 @@ const Auth = () => {
                       required
                     />
                   </div>
+
                   <Button className="w-full" disabled={isLoading}>
                     {isLoading ? "Logging in..." : "Login"}
                   </Button>
                 </form>
               </TabsContent>
 
+              {/* SIGNUP FORM */}
               <TabsContent value="signup">
                 <form onSubmit={handleSignup} className="space-y-4 mt-4">
                   <Input
