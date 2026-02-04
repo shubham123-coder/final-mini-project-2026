@@ -15,4 +15,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // ✅ SPA fallback and base for static hosting
+  build: {
+    outDir: "dist", // default, but explicit is better
+  },
+  base: "/", // ensures assets are loaded correctly
 }));
